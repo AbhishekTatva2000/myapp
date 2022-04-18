@@ -1,0 +1,4 @@
+Hii <%= params[:user].email %>
+
+To Reset password click below link:
+<%= password_reset_edit_url(token: @token) %>

@@ -1,0 +1,11 @@
+<h1>Welcome to the Website</h1>
+<% if Current.user %>
+    <h4>You are logged in as : <%= Current.user.email %></h4>
+    <%= button_to "logout", logout_path, method: :delete %>
+    <br>
+    <br>
+    <%= link_to "Edit Password", edit_password_path %>
+<% else %>
+    <%= link_to "Signup", sign_up_path %><br>
+    <%= link_to "login", sign_in_path %>
+<% end %>
